@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#slider header nav ul li {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+  letter-spacing: 0.2em;
+  padding: 10px 24px;
+}
+
+#slider .slider-addon .round-btn .round:nth-of-type(4), #slider .slider-addon .round-btn .round:nth-of-type(3), #slider .slider-addon .round-btn .round:nth-of-type(2) {
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, ul, li {
+  color: #ffffff;
+  font-weight: normal;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+li {
+  list-style-type: none;
+}
+
+#slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background-image: url("../img/helico.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#slider header {
+  margin-top: 25px;
+}
+#slider header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+#slider header nav ul {
+  display: flex;
+  margin-right: 15vw;
+}
+#slider header nav ul li {
+  cursor: pointer;
+}
+#slider header nav ul li:last-child {
+  margin-left: 25px;
+}
+#slider header nav ul li:hover {
+  transition: background-color 0.2s ease;
+  background-color: red;
+}
+#slider .slider-addon {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#slider .slider-addon .round-btn {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+#slider .slider-addon .round-btn .round {
+  display: block;
+  width: 11px;
+  height: 11px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+#slider footer {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+#slider footer .name {
+  text-align: center;
+}
+#slider footer .name span {
+  display: block;
+}
+#slider footer .name span h2 {
+  opacity: 0.8;
+}
+#slider footer .name span:first-child {
+  position: relative;
+  top: 4px;
+}
+#slider footer .name span:last-child {
+  position: relative;
+  bottom: 4px;
+}
+#slider footer .name span:last-child::before {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 2px;
+  left: 20px;
+  top: 12px;
+  background-color: red;
+}
+#slider footer .name span:last-child::after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 2px;
+  right: 20px;
+  top: 12px;
+  background-color: red;
+}
+
+@media screen and (max-width: 1200px) {
+  #slider header nav {
+    justify-content: center;
+  }
+  #slider header nav ul {
+    margin: 0;
+    padding: 18px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

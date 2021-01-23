@@ -1,0 +1,26 @@
+{
+  "name": "ql_portfolio",
+  "version": "1.0.0",
+  "description": "Quentin Leduff | CG Artist",
+  "main": "./assets/js/app.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxess-dev/QLPortfolio.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "CG",
+    "Artist"
+  ],
+  "author": "MaXess (Maxime Schellenberger)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxess-dev/QLPortfolio/issues"
+  },
+  "homepage": "https://github.com/maxess-dev/QLPortfolio#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "gsap": "^3.6.0"
+  }
+}
