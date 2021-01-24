@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#slider header nav ul li {
+#interface header nav ul li {
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 25px;
   letter-spacing: 0.2em;
   padding: 10px 24px;
 }
 
-#slider .slider-addon .round-btn .round:nth-of-type(4), #slider .slider-addon .round-btn .round:nth-of-type(3), #slider .slider-addon .round-btn .round:nth-of-type(2) {
+#interface .slider-addon .round-btn .round:nth-of-type(4), #interface .slider-addon .round-btn .round:nth-of-type(3), #interface .slider-addon .round-btn .round:nth-of-type(2) {
   border-radius: 50%;
   margin-top: 20px;
 }
@@ -19,11 +19,79 @@ h2 {
   font-size: 1.4em;
 }
 
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+@keyframes animOpacity {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes appear2 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translateY(0px);
+  }
+}
+@keyframes barAnim {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 45px;
+  }
+}
+@keyframes barAnimXS {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 30px;
+  }
+}
+@keyframes appearBtn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
-  overflow: hidden;
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  background-color: black;
 }
 
 h1, h2, h3, h4, h5, h6, ul, li {
@@ -44,103 +112,207 @@ li {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#home {
+  position: relative;
+  overflow: hidden;
+}
+
+.active {
+  z-index: 500 !important;
+  animation: animOpacity 6s ease-in-out;
+  visibility: visible !important;
+}
+
+.r-active {
+  opacity: 0;
+  animation: appearBtn 0.8s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.1s;
+  background-color: white;
+}
+
 #slider {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: block;
+}
+#slider span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  z-index: -100;
+}
+#slider span img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#interface {
+  position: relative;
+  z-index: 1000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  background-image: url("../img/helico.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-#slider header {
+#interface header {
   margin-top: 25px;
 }
-#slider header nav {
+#interface header nav {
   display: flex;
   justify-content: flex-end;
 }
-#slider header nav ul {
+#interface header nav ul {
   display: flex;
   margin-right: 15vw;
+  position: relative;
+  padding: 0;
 }
-#slider header nav ul li {
+#interface header nav ul li {
   cursor: pointer;
+  position: relative;
 }
-#slider header nav ul li:last-child {
-  margin-left: 25px;
+#interface header nav ul li::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  border-radius: 25px;
+  background-color: #c0392b;
+  transition: all 0.2s ease;
 }
-#slider header nav ul li:hover {
-  transition: background-color 0.2s ease;
-  background-color: red;
+#interface header nav ul li:last-child {
+  margin-left: 20px;
 }
-#slider .slider-addon {
+#interface header nav ul li:hover::after {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease;
+}
+#interface header nav ul li a {
+  position: relative;
+  z-index: 100;
+}
+#interface .slider-addon {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-#slider .slider-addon .round-btn {
+#interface .slider-addon .round-btn {
   display: flex;
   flex-direction: column;
   margin-right: 50px;
 }
-#slider .slider-addon .round-btn .round {
+#interface .slider-addon .round-btn .round {
+  cursor: pointer;
   display: block;
   width: 11px;
   height: 11px;
-  border: 2px solid white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
 }
-#slider footer {
+#interface footer {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 20px;
   display: flex;
   justify-content: center;
 }
-#slider footer .name {
+#interface footer .name {
   text-align: center;
 }
-#slider footer .name span {
+#interface footer .name span {
   display: block;
 }
-#slider footer .name span h2 {
-  opacity: 0.8;
+#interface footer .name span h1 {
+  opacity: 0;
+  animation: appear 0.4s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.6s;
 }
-#slider footer .name span:first-child {
+#interface footer .name span h2 {
+  opacity: 0;
+  animation: appear2 0.4s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.8s;
+}
+#interface footer .name span:first-child {
   position: relative;
   top: 4px;
 }
-#slider footer .name span:last-child {
+#interface footer .name span:last-child {
   position: relative;
   bottom: 4px;
 }
-#slider footer .name span:last-child::before {
+#interface footer .name span:last-child::before {
+  animation: barAnim 0.4s ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
   content: "";
   position: absolute;
-  width: 45px;
+  width: 0px;
   height: 2px;
-  left: 20px;
-  top: 12px;
-  background-color: red;
+  left: 40px;
+  top: 13px;
+  background-color: #c0392b;
 }
-#slider footer .name span:last-child::after {
+#interface footer .name span:last-child::after {
+  animation: barAnim 0.4s ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
   content: "";
   position: absolute;
-  width: 45px;
+  width: 0px;
   height: 2px;
-  right: 20px;
-  top: 12px;
-  background-color: red;
+  right: 40px;
+  top: 13px;
+  background-color: #c0392b;
 }
 
 @media screen and (max-width: 1200px) {
-  #slider header nav {
+  #interface header nav {
     justify-content: center;
+    margin-top: 20px;
   }
-  #slider header nav ul {
+  #interface header nav ul {
     margin: 0;
-    padding: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  footer .name span h1 {
+    font-size: 1.5em;
+  }
+  footer .name span h2 {
+    font-size: 1em;
+  }
+  footer .name span:last-child::before {
+    top: 9px !important;
+    animation: barAnimXS 0.4s ease !important;
+    animation-fill-mode: forwards !important;
+    animation-delay: 1s !important;
+  }
+  footer .name span:last-child::after {
+    top: 9px !important;
+    animation: barAnimXS 0.4s ease !important;
+    animation-fill-mode: forwards !important;
+    animation-delay: 1s !important;
   }
 }
 

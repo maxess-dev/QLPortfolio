@@ -2,6 +2,7 @@
 
 // --> Colors
 $primary :#ffffff;
+$secondary: #c0392b;
 
 // --> Buttons
 %medium-btn{
@@ -25,11 +26,87 @@ $primary :#ffffff;
     font-size: 1.4em;
 }
 
+// --> Animation
+@keyframes slide-in{
+    0%{
+        opacity: 0;
+        width: 0%;
+    }
+    100%{
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@keyframes animOpacity{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    95%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes appear2{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 0.8;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes barAnim{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 45px;
+    }
+}
+
+@keyframes barAnimXS{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 30px;
+    }
+}
+
+@keyframes appearBtn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 body{
-    overflow: hidden;
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    background-color: black;
 }
 
 h1,h2,h3,h4,h5,h6,ul,li{
@@ -48,16 +125,61 @@ h2{
     @extend %medium-font;
 }
 
-li{
-    list-style-type: none;
+li{ list-style-type: none; }
+
+a{ 
+    text-decoration: none;
+    color: $primary;
+}
+
+#home{
+    position: relative;
+    overflow: hidden;
+}
+
+.active{
+    z-index: 500 !important;
+    animation: animOpacity 6s ease-in-out;
+    visibility: visible !important;
+}
+
+.r-active{
+    opacity: 0;
+    animation: appearBtn 0.8s ease;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+    background-color: white;
 }
 
 #slider{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        visibility: hidden;
+        z-index: -100;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+#interface{
+    position: relative;
+    z-index: 1000;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    background-image: url('../img/helico.jpg');
+    // background-color: lightblue;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -69,16 +191,40 @@ li{
             ul{
                 display: flex;
                 margin-right: 15vw;
+                position: relative;
+                padding: 0;
                 li{
                     cursor: pointer;
+                    position: relative;
+                    @extend %medium-btn;
+                    &::after{
+                        content: '';
+                        pointer-events: none;
+                        position: absolute;
+                        width: 20%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        opacity: 0;
+                        border-radius: 25px;
+                        background-color: $secondary;
+                        transition: all 0.2s ease;
+                    }
                     &:last-child{
-                        margin-left: 25px;
+                        margin-left: 20px;
                     }
                     &:hover{
-                        transition: background-color 0.2s ease;
-                        background-color: red;
+                        &::after{
+                            opacity: 1;
+                            width: 100%;
+                            height: 100%;
+                            transition: all 0.2s ease;
+                        }
                     }
-                    @extend %medium-btn;
+                    a{
+                        position: relative;
+                        z-index: 100;
+                    }
                 }
             }
         }
@@ -92,10 +238,11 @@ li{
             flex-direction: column;
             margin-right: 50px;
             .round{
+                cursor: pointer;
                 display: block;
                 width: 11px;
                 height: 11px;
-                border: 2px solid white;
+                border: 2px solid rgba(255,255,255,0.5);
                 border-radius: 50%;
                 &:nth-of-type(2){
                     @extend %slider-btn;
@@ -118,8 +265,17 @@ li{
             text-align: center;
             span{
                 display: block;
+                h1{
+                    opacity: 0;
+                    animation: appear 0.4s ease;
+                    animation-fill-mode: forwards;
+                    animation-delay: 0.6s;
+                }
                 h2{
-                    opacity: 0.8;
+                    opacity: 0;
+                    animation: appear2 0.4s ease;
+                    animation-fill-mode: forwards;
+                    animation-delay: 0.8s;
                 }
                 &:first-child{
                     position: relative;
@@ -129,22 +285,28 @@ li{
                     position: relative;
                     bottom: 4px;
                     &::before{
+                        animation: barAnim 0.4s ease-in-out;
+                        animation-delay: 1s;
+                        animation-fill-mode: forwards;
                         content: "";
                         position: absolute;
-                        width: 45px;
+                        width: 0px;
                         height: 2px;
-                        left: 20px;
-                        top: 12px;
-                        background-color: red;
+                        left: 40px;
+                        top: 13px;
+                        background-color: $secondary;
                     }
                     &::after{
+                        animation: barAnim 0.4s ease-in-out;
+                        animation-delay: 1s;
+                        animation-fill-mode: forwards;
                         content: "";
                         position: absolute;
-                        width: 45px;
+                        width: 0px;
                         height: 2px;
-                        right: 20px;
-                        top: 12px;
-                        background-color: red;
+                        right: 40px;
+                        top: 13px;
+                        background-color: $secondary;
                     }
                 }
             }
@@ -153,16 +315,44 @@ li{
 }
 
 @media screen and (max-width: 1200px) {
-    #slider{
+    #interface{
         header{
             nav{
                 justify-content: center;
+                margin-top: 20px;
                 ul{
                     margin: 0;
-                    padding: 18px;
                 }
             }
         }
     }
 }
 
+@media screen and (max-width: 400px) {
+    footer{
+        .name{
+            span{
+                h1{
+                    font-size: 1.5em;
+                }
+                h2{
+                    font-size: 1em;
+                }
+                &:last-child{
+                    &::before{
+                        top: 9px !important;
+                        animation: barAnimXS 0.4s ease !important;
+                        animation-fill-mode: forwards !important;
+                        animation-delay: 1s !important;
+                    }
+                    &::after{
+                        top: 9px !important;
+                        animation: barAnimXS 0.4s ease !important;
+                        animation-fill-mode: forwards !important;
+                        animation-delay: 1s !important;
+                    }
+                }
+            }
+        }
+    }
+}
