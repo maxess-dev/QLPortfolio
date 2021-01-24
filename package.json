@@ -21,6 +21,7 @@
   "homepage": "https://github.com/maxess-dev/QLPortfolio#readme",
   "devDependencies": {},
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "gsap": "^3.6.0"
   }
 }

@@ -4,10 +4,10 @@
 <body>
     <main id="home">
         <div id="slider">
-            <span class="item-slider"><img src="./assets/img/audi.png" alt="Hélicoptère de l'armée américaine"></span>
-            <span class="item-slider"><img src="./assets/img/porsche.png" alt="Hélicoptère de l'armée américaine"></span>
-            <span class="item-slider"><img src="./assets/img/helico.png" alt="Hélicoptère de l'armée américaine"></span>
-            <span class="item-slider"><img src="./assets/img/submarine.png" alt="Hélicoptère de l'armée américaine"></span>
+            <span class="item-slider"><img src="./assets/img/audi.webp" alt="Hélicoptère de l'armée américaine" width="600" height="600"></span>
+            <span class="item-slider"><img src="./assets/img/porsche.webp" alt="Hélicoptère de l'armée américaine" width="600" height="600"></span>
+            <span class="item-slider"><img src="./assets/img/helico.webp" alt="Hélicoptère de l'armée américaine" width="600" height="600"></span>
+            <span class="item-slider"><img src="./assets/img/submarine.webp" alt="Hélicoptère de l'armée américaine" width="600" height="600"></span>
         </div>
         <div id="interface">
             <header>
