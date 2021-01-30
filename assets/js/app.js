@@ -75,4 +75,4 @@ function progressBar(){
 
 // Start progress bar
 let indicator = window.setInterval(progressBar,50);
-progressBar()
+progressBar();
