@@ -42,7 +42,6 @@ for (let i = 0; i < buttonSlide.length; i++) {
         clearInterval(indicator)
         run = window.setInterval(changeSlide,time);
         indicator = window.setInterval(progressBar,50);
-        console.log("cleared");
         count = (i / nbSlide) * 100;
         buttonSlide[i].classList.add("r-active");
         for(const slide of slides) {

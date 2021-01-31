@@ -27,7 +27,7 @@
   font-style: normal;
   font-display: swap;
 }
-#interface header nav ul li {
+#interface header nav ul a li {
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 25px;
   letter-spacing: 0.2em;
@@ -136,6 +136,17 @@ h2 {
   text-transform: uppercase;
 }
 
+span h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.6em;
+}
+
+span h4 {
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
 li {
   list-style-type: none;
 }
@@ -149,6 +160,85 @@ a {
   position: relative;
   overflow: hidden;
 }
+#home #menu {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: absolute;
+  z-index: 10000;
+  display: none;
+}
+#home #menu .title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#home #menu .title span {
+  display: block;
+  cursor: pointer;
+}
+#home #menu .title span h3 {
+  opacity: 0;
+  animation: appear 0.4s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.6s;
+}
+#home #menu .title span h4 {
+  opacity: 0;
+  animation: appear2 0.4s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.8s;
+}
+#home #menu .title span:first-child {
+  position: relative;
+  top: 20px;
+}
+#home #menu .title span:last-child {
+  position: relative;
+  bottom: 15px;
+}
+#home #menu .title span:last-child::before {
+  animation: barAnimXS 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  left: 100px;
+  top: 32px;
+  background-color: #c0392b;
+}
+#home #menu .title span:last-child::after {
+  animation: barAnimXS 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  right: 100px;
+  top: 32px;
+  background-color: #c0392b;
+}
+#home #menu .menu-list {
+  display: flex;
+  justify-content: center;
+}
+#home #menu .menu-list ul {
+  padding: 0 50px;
+}
+#home #menu .menu-list ul li:not(li:first-child) {
+  opacity: 0.6;
+  margin-top: 15px;
+  font-size: 1em;
+  transition: opacity 0.2s ease;
+}
+#home #menu .menu-list ul li:not(li:first-child):hover {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
 #home #indicator-slider {
   height: 4px;
   background: #020024;
@@ -157,6 +247,17 @@ a {
   bottom: 0;
   border-radius: 5px;
   z-index: 3000;
+}
+
+.title-list {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.active-menu {
+  display: block !important;
+  z-index: 10000 !important;
 }
 
 .active {
@@ -218,14 +319,15 @@ a {
   position: relative;
   padding: 0;
 }
-#interface header nav ul li {
+#interface header nav ul a li {
   cursor: pointer;
   position: relative;
 }
-#interface header nav ul li::after {
+#interface header nav ul a li::after {
   content: "";
   pointer-events: none;
   position: absolute;
+  z-index: -100;
   width: 20%;
   height: 100%;
   left: 0;
@@ -235,18 +337,14 @@ a {
   background-color: #c0392b;
   transition: all 0.2s ease;
 }
-#interface header nav ul li:last-child {
+#interface header nav ul a li:last-child {
   margin-left: 20px;
 }
-#interface header nav ul li:hover::after {
+#interface header nav ul a li:hover::after {
   opacity: 1;
   width: 100%;
   height: 100%;
   transition: all 0.2s ease;
-}
-#interface header nav ul li a {
-  position: relative;
-  z-index: 100;
 }
 #interface .slider-addon {
   width: 100%;

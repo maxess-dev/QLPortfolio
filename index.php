@@ -3,6 +3,33 @@
 <!---- BODY ---->
 <body>
     <main id="home">
+        <div id="menu">
+            <div class="title">
+                <span><h3 class="returnHome">Quentin Leduff</h3></span>
+                <span><h4 class="returnHome">CG Artist</h4></span>
+            </div>
+            <div class="menu-list">
+                <ul>
+                    <li class="title-list"><a href="#">My Story</a></li>
+                    <li><a href="#">Me</a></li>
+                    <li><a href="#">Digital Painting</a></li>
+                    <li><a href="#">Photographe</a></li>
+                </ul>
+                <ul>
+                    <li class="title-list"><a href="#">CG Portfolio</li>
+                    <li><a href="#">Vehicles</a></li>
+                    <li><a href="#">Scenes</a></li>
+                    <li><a href="#">Organic</a></li>
+                    <li><a href="#">Movies</a></li>
+                </ul>
+                <ul>
+                    <li class="title-list"><a href="#">3D Visualizer</a></li>
+                </ul>
+                <ul>
+                    <li class="title-list"><a href="#">Artbook</a></li>
+                </ul>
+            </div>
+        </div>
         <div id="slider">
             <span class="item-slider"><img src="./assets/img/porsche.webp" alt="Voiture de sport de la marque Porsche" width="600" height="600"></span>
             <span class="item-slider"><img src="./assets/img/audi.webp" alt="Voiture de sport de la marque Audi" width="600" height="600"></span>
@@ -13,8 +40,8 @@
             <header>
                 <nav class="nav-ctn">
                     <ul>
-                        <li><a href="#">explore</a></li>
-                        <li><a href="#">contact</a></li>
+                        <a href="#"><li id="goToMenuBtn">explore</li></a>
+                        <a href="#"><li>contact</li></a>
                     </ul>
                 </nav>
             </header>
