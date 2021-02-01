@@ -8,25 +8,50 @@
                 <span><h3 class="returnHome">Quentin Leduff</h3></span>
                 <span><h4 class="returnHome">CG Artist</h4></span>
             </div>
+            <div class="list-icons">
+                <ul>
+                    <li>
+                        <a href="#" target="_blank"><img src="./assets/icons/behance.svg" alt="Behance link" class="icons" width="20" height="20"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="./assets/icons/youtube.svg" alt="Youtube link" class="icons" width="20" height="20"></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"><img src="./assets/icons/facebook.svg" alt="Facebook link" class="icons" width="20" height="20"></a>
+                    </li>
+                </ul>
+            </div>
             <div class="menu-list">
+                <div class="inner-menu-list">
+                    <div class="block-menu-1">
+                        <ul>
+                            <li class="title-list"><a href="#">My Story</a></li>
+                            <li><a href="#">Me</a></li>
+                            <li><a href="#">Digital Painting</a></li>
+                            <li><a href="#">Photographe</a></li>
+                            <li><a href="#">Artbook</a></li>
+                        </ul>
+                        <ul>
+                            <li class="title-list"><a href="#">CG Portfolio</a></li>
+                            <li><a href="#">Vehicles</a></li>
+                            <li><a href="#">Scenes</a></li>
+                            <li><a href="#">Organic</a></li>
+                            <li><a href="#">Movies</a></li>
+                        </ul>
+                    </div>
+                    <div class="block-menu-2">
+                        <ul>
+                            <li class="title-list"><a href="#">3D Visualizer</a></li>
+                        </ul>
+                        <ul>
+                            <li class="title-list"><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="close-menu">
                 <ul>
-                    <li class="title-list"><a href="#">My Story</a></li>
-                    <li><a href="#">Me</a></li>
-                    <li><a href="#">Digital Painting</a></li>
-                    <li><a href="#">Photographe</a></li>
-                </ul>
-                <ul>
-                    <li class="title-list"><a href="#">CG Portfolio</li>
-                    <li><a href="#">Vehicles</a></li>
-                    <li><a href="#">Scenes</a></li>
-                    <li><a href="#">Organic</a></li>
-                    <li><a href="#">Movies</a></li>
-                </ul>
-                <ul>
-                    <li class="title-list"><a href="#">3D Visualizer</a></li>
-                </ul>
-                <ul>
-                    <li class="title-list"><a href="#">Artbook</a></li>
+                    <li><a href="#">home</a></li>
                 </ul>
             </div>
         </div>
@@ -40,8 +65,8 @@
             <header>
                 <nav class="nav-ctn">
                     <ul>
-                        <a href="#"><li id="goToMenuBtn">explore</li></a>
-                        <a href="#"><li>contact</li></a>
+                        <li id="goToMenuBtn"><a href="#">explore</a></li>
+                        <li><a href="#">contact</a></li>
                     </ul>
                 </nav>
             </header>
