@@ -11,13 +11,16 @@
             <div class="list-icons">
                 <ul>
                     <li>
-                        <a href="#" target="_blank"><img src="./assets/icons/behance.svg" alt="Behance link" class="icons" width="20" height="20"></a>
+                        <a href="https://www.youtube.com/c/QuentinLeDuff/videos" target="_blank"><img src="./assets/icons/youtube.svg" alt="Youtube link" class="icons" width="20" height="20"></a>
                     </li>
                     <li>
-                        <a href="#" target="_blank"><img src="./assets/icons/youtube.svg" alt="Youtube link" class="icons" width="20" height="20"></a>
+                        <a href="https://www.behance.net/quentinleduff-3d?tracking_source=search_users_recommended%7Cquentin%20leduff" target="_blank"><img src="./assets/icons/behance.svg" alt="Behance link" class="icons" width="20" height="20"></a>
                     </li>
                     <li>
-                        <a href="#" target="_blank"><img src="./assets/icons/facebook.svg" alt="Facebook link" class="icons" width="20" height="20"></a>
+                        <a href="https://www.facebook.com/profile.php?id=100009886263876" target="_blank"><img src="./assets/icons/facebook.svg" alt="Facebook link" class="icons" width="20" height="20"></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/Blender_Dragon" target="_blank"><img src="./assets/icons/twitter.svg" alt="Twitter link" class="icons" width="20" height="20"></a>
                     </li>
                 </ul>
             </div>
@@ -42,6 +45,7 @@
                     <div class="block-2">
                         <ul>
                             <li class="title-list"><a href="#">3D Visualizer</a></li>
+                            <li><a href="#">Models</a></li>
                         </ul>
                         <ul>
                             <li class="title-list"><a href="#">Contact</a></li>

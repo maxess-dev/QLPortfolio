@@ -258,10 +258,13 @@ a {
   padding: 0;
 }
 #home #menu .list-icons ul li:nth-child(2) {
-  margin-left: 40px;
+  margin-left: 30px;
+}
+#home #menu .list-icons ul li:nth-child(3) {
+  margin-left: 30px;
 }
 #home #menu .list-icons ul li:last-child {
-  margin-left: 40px;
+  margin-left: 30px;
 }
 #home #menu .menu-list {
   margin-top: 50px;
