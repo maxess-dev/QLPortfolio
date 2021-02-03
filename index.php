@@ -23,7 +23,7 @@
             </div>
             <div class="menu-list">
                 <div class="inner-menu-list">
-                    <div class="block-menu-1">
+                    <div class="block-1">
                         <ul>
                             <li class="title-list"><a href="#">My Story</a></li>
                             <li><a href="#">Me</a></li>
@@ -39,7 +39,7 @@
                             <li><a href="#">Movies</a></li>
                         </ul>
                     </div>
-                    <div class="block-menu-2">
+                    <div class="block-2">
                         <ul>
                             <li class="title-list"><a href="#">3D Visualizer</a></li>
                         </ul>
