@@ -1,5 +1,5 @@
 <!---- HEAD ---->
-<?php include('./vue/head.php') ?>
+<?php include('./vue/head.php'); ?>
 <!---- BODY ---->
 <body>
     <main id="home">
