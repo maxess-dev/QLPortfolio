@@ -25,11 +25,11 @@
                             <form method="POST" action="#" enctype="multipart/form-data">
                                 <div class="form-outline" style="margin-top: 20px;">
                                     <label class="form-label" for="nomCategorie">Nom de la catégorie</label>
-                                    <input type="text" id="nomCategorie" class="form-control" name="nomCategorie" />
+                                    <input type="text" id="nomCategorie" class="form-control" name="nomCategorie" required />
                                 </div>
                                 <div class="form-outline" style="margin-top: 20px;">
                                     <label class="custom-file-label" for="photoCategorie">Choisir une photo pour la catégorie</label>
-                                    <input type="file" class="custom-file-input" id="photoCategorie" name="photoCategorie">
+                                    <input type="file" class="custom-file-input" id="photoCategorie" name="photoCategorie" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary" style="margin-top: 20px; padding: 10px 20px;">Envoyer</button>
                             </form>
