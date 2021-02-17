@@ -2,9 +2,7 @@
     <div id="throbber" style="display:none; min-height:120px;"></div>
     <div id="noty-holder"></div>
     <div id="wrapper">
-        <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -13,7 +11,6 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">       
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quitter le back-office <b class="fa fa-angle-down"></b></a>
@@ -22,7 +19,6 @@
                     </ul>
                 </li>
             </ul>
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
@@ -51,23 +47,15 @@
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </nav>
-
         <div id="page-wrapper">
             <div class="container-fluid">
-                <!-- Page Heading -->
                 <div class="row" id="main" >
                     <div class="col-sm-12 col-md-12 well" id="content">
                         <h1>Page d'admin</h1>
                     </div>
                 </div>
-                <!-- /.row -->
             </div>
-            <!-- /.container-fluid -->
         </div>
-        <!-- /#page-wrapper -->
-    </div><!-- /#wrapper -->
-</body>
-</html>
+    </div>
 <?php include("../admin/vue/footer.php"); ?>

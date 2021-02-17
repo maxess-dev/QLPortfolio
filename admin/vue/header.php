@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link href="./css/style.css" rel="stylesheet">
+    <link href="/QL_Portfolio/admin/css/style.css" rel="stylesheet">
 </head>
 <body>
+<html>
