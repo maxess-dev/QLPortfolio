@@ -15,6 +15,7 @@
                             $req = $db->prepare("INSERT INTO categorie (nom,url_photo) VALUES (?,?)");
                             $req->execute(array($_POST["nomCategorie"],$_FILES["photoCategorie"]["name"]));
                             echo "Catégorie ajoutée et image uploadé dans le dossier upload";
+                            $req->closeCursor();
                         } else {
                             echo "Veuillez indiquer un nom de catégorie ainsi qu'une image associée à la catégorie";
                         }

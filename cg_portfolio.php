@@ -35,7 +35,7 @@
                             <li><a href="#">Artbook</a></li>
                         </ul>
                         <ul>
-                            <li class="title-list"><a href="/cg_portfolio.php">CG Portfolio</a></li>
+                            <li class="title-list"><a href="/QL_Portfolio/cg_portfolio.php">CG Portfolio</a></li>
                             <li><a href="#">Vehicles</a></li>
                             <li><a href="#">Scenes</a></li>
                             <li><a href="#">Organic</a></li>
@@ -59,8 +59,30 @@
                 </ul>
             </div>
         </div>
-        <div id="slider">
-
+        <div id="interface">
+            <header>
+                <nav class="nav-ctn">
+                    <ul>
+                        <li id="goToMenuBtn"><a href="#">explore</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="content-title">
+            <?php
+                require_once("./admin/fonctions/connect.php");
+                $req = $db->query("SELECT nom,url_photo FROM categorie");
+                while ($data = $req->fetch()) {
+                    var_dump($data);
+            ?>
+                <div>
+                    <img src="/admin/upload/<?= $data["url_photo"] ?>" alt="">
+                    <h3><?= $data["nom"] ?></h3>
+                </div>
+            <?php
+            }
+            ?>
+            </div>
         </div>
     </main>
 </body>
