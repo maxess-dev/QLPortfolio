@@ -24,9 +24,9 @@
                     <li>
                         <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-fw fa-search"></i> CATÉGORIE <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                         <ul id="submenu-1" class="collapse">
-                            <li><a href="/QL_Portfolio/admin/article/display_all_art.php"><i class="fa fa-angle-double-right"></i> Voir toutes les catégories</a></li>
-                            <li><a href="/QL_Portfolio/admin/article/add_art.php"><i class="fa fa-angle-double-right"></i> Ajouter une catégorie</a></li>
-                            <li><a href="/QL_Portfolio/admin/article/remove_art.php"><i class="fa fa-angle-double-right"></i> Supprimer une catégorie</a></li>
+                            <li><a href="/QL_Portfolio/admin/categorie/display_all_cat.php"><i class="fa fa-angle-double-right"></i> Voir toutes les catégories</a></li>
+                            <li><a href="/QL_Portfolio/admin/categorie/add_cat.php"><i class="fa fa-angle-double-right"></i> Ajouter une catégorie</a></li>
+                            <li><a href="/QL_Portfolio/admin/categorie/remove_cat.php"><i class="fa fa-angle-double-right"></i> Supprimer une catégorie</a></li>
                         </ul>
                     </li>
                     <li>

@@ -1,17 +1,19 @@
 const goToMenuBtn = document.getElementById("goToMenuBtn");
 const title = document.getElementsByClassName("returnHome");
 const menu = document.getElementById("menu");
-console.log(goToMenuBtn);
+const innerMenuList = document.querySelector(".inner-menu-list");
+const closeMenu = document.querySelector(".close-menu");
+const listIcon = document.querySelector(".list-icons");
 
 goToMenuBtn.addEventListener("click",() => {
     menu.classList.add("active-menu");
+    innerMenuList.classList.add("active-inner-menu");
+    closeMenu.classList.add("active-close-menu");
+    listIcon.classList.add("active-list-icon");
 })
-
 
 for (const el of title) {
     el.addEventListener("click", () => {
-        menu.classList.remove("active-menu");
+        window.location.href = "/QL_Portfolio/index.php";
     })
 }
-
-console.log(title)

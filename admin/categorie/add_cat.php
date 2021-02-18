@@ -11,7 +11,8 @@
                         if(isset($_POST["nomCategorie"]) && isset($_FILES["photoCategorie"])){
                             require_once("../fonctions/connect.php");
                             $tmp_name = $_FILES["photoCategorie"]["tmp_name"];
-                            move_uploaded_file($tmp_name, '../upload/' . $_FILES["photoCategorie"]["name"]);
+                            $img_name =  $_FILES["photoCategorie"]["name"];
+                            move_uploaded_file($tmp_name, '../upload/' . $img_name);
                             $req = $db->prepare("INSERT INTO categorie (nom,url_photo) VALUES (?,?)");
                             $req->execute(array($_POST["nomCategorie"],$_FILES["photoCategorie"]["name"]));
                             echo "Catégorie ajoutée et image uploadé dans le dossier upload";

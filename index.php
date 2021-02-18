@@ -55,7 +55,7 @@
             </div>
             <div class="close-menu">
                 <ul>
-                    <li><a href="#">home</a></li>
+                    <li><a href="/QL_Portfolio/index.php">home</a></li>
                 </ul>
             </div>
         </div>
@@ -94,5 +94,4 @@
 </body>
 <!---- FOOTER ---->
 <script defer src="./assets/js/slider.js"></script>
-<script defer src="./assets/js/menu.js"></script>
 <?php include('./vue/footer.php') ?>

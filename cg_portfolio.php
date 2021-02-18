@@ -55,7 +55,7 @@
             </div>
             <div class="close-menu">
                 <ul>
-                    <li><a href="#">home</a></li>
+                    <li><a href="/QL_Portfolio/index.php">home</a></li>
                 </ul>
             </div>
         </div>
@@ -76,7 +76,7 @@
                     var_dump($data);
             ?>
                 <div>
-                    <img src="/admin/upload/<?= $data["url_photo"] ?>" alt="">
+                    <img src="/QL_Portfolio/admin/upload/<?= $data["url_photo"] ?>" alt="">
                     <h3><?= $data["nom"] ?></h3>
                 </div>
             <?php

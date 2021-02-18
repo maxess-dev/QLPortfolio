@@ -125,6 +125,24 @@ h2 {
     opacity: 1;
   }
 }
+@keyframes activeMenu {
+  0% {
+    height: 0vh;
+  }
+  100% {
+    height: 100vh;
+  }
+}
+@keyframes activeInnerMenu {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 body {
   box-sizing: border-box;
   margin: 0;
@@ -251,6 +269,7 @@ a {
   display: flex;
   justify-content: center;
   margin-top: -20px;
+  opacity: 0;
 }
 #home #menu .list-icons ul {
   display: flex;
@@ -270,6 +289,7 @@ a {
   margin-top: 50px;
 }
 #home #menu .menu-list .inner-menu-list {
+  opacity: 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -309,6 +329,7 @@ a {
   display: flex;
   justify-content: center;
   margin-top: 100px;
+  opacity: 0;
 }
 #home #menu .close-menu ul {
   display: flex;
@@ -360,7 +381,26 @@ a {
   opacity: 1;
 }
 
+.active-list-icon {
+  animation: activeInnerMenu 1s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.8s;
+}
+
+.active-inner-menu {
+  animation: activeInnerMenu 1s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.active-close-menu {
+  animation: activeInnerMenu 1s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1.2s;
+}
+
 .active-menu {
+  animation: activeMenu 0.6s ease;
   display: flex !important;
   z-index: 10000 !important;
 }
